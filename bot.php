@@ -13,21 +13,35 @@ $message = $update["message"]["text"];
 
 if (strpos($message, "/start") === 0){
 sendMessage($chatId, 
-"⚡️ HEYYY ! ⚡️ 
+"🦇 HEYYY ! 🦇 
 TYPE /cmds TO KNOW ALL MY COMMANDS 
-BOT FOR CC MADE BY => ⚡️ @flash_its_me ⚡️ ", $message_id);
+BOT FOR CC MADE BY => 🦇 @tplein_dkk_cc 🦇 ", $message_id);
 }
 
 //////////=========[Cmds Command]=========//////////
 
 elseif (strpos($message, "/cmds") === 0){
 sendMessage($chatId, 
-"⚡️ COMMANDS ⚡️
+"🦇 COMMANDS 🦇
 /b3 => braintreeChecker
 /st => stripeChecker
 /bin => binInfo", $message_id);
 }
 
+
+elseif (strpos($message, "/b3") === 0){
+sendMessage($chatId, 
+            "🦇 HEY ! 🦇
+ this COMMANDS is currently in maintenance
+               COME BACK LATER ", $message_id);
+}
+
+elseif (strpos($message, "/st") === 0){
+sendMessage($chatId, 
+            "🦇 HEY ! 🦇
+ this COMMANDS is currently in maintenance
+               COME BACK LATER ", $message_id);
+}
 
 
 elseif (strpos($message, "/bin") === 0){
@@ -59,7 +73,14 @@ $bin = 'Credit';
 }else{
 $bin = 'Debit';
 };
-sendMessage($chatId, '<b>⚡️ VALID BIN ⚡️</b>%0A<b>BANK:</b> '.$bank.'%0A<b>COUNTRY:</b> '.$name.'%0A<b>BRAND:</b> '.$brand.'%0A<b>CARD:</b> '.$scheme.'%0A<b>TYPE:</b> '.$type.'%0A<b>CHECKED By:</b> @'.$username.'%0A%0A<b>Bot Made by:Team Zeltrax  @flash_its_me</b>', $message_id);
+sendMessage($chatId, '
+🦇 VALID BIN 🦇
+BANK => '.$bank.'
+COUNTRY => '.$name.'
+BRAND => '.$brand.'
+CARD => '.$scheme.'
+TYPE => '.$type.'
+BOT MADE by => 🦇 @tplein_dkk_cc 🦇', $message_id);
 }
 
 
